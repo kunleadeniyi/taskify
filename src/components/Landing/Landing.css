@@ -1,0 +1,212 @@
+.login {
+    align-items: center;
+    vertical-align: middle;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.googleButton {
+    width: 100% !important;
+    margin-top: 15px;
+}
+
+.formLabel {
+    float: left;
+    font-weight: bold;
+}
+
+.formItem {
+    margin: 9% 0%;
+}
+
+@media only screen and (max-device-width: 480px) {
+    /* styles for mobile browsers smaller than 480px; (Phone) */
+    .formItem {
+        margin: 7% 0%;
+    }
+}
+
+/* Landing page */
+.logo {
+    margin: 2% 2%;
+    height: 85px !important;
+    width: 85px !important;
+}
+
+.landingTitle {
+    font-family: 'Montserrat', sans-serif;;
+    font-size: 350%;
+    font-weight: 400;
+    text-align: left;
+    margin: auto 2%;
+}
+
+.headerBar {
+    display: inline-flex;
+    padding: 2% 2%;
+    /* justify-content: left; */
+    flex-flow: row-reverse;
+}
+.headerBarButton {
+    margin-left: 5% !important;
+    border-radius: 10px;
+    width: 95px;
+    height: 55px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    background-color: teal;
+}
+.headerButtonLink {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.organizeContent {
+    position: relative;
+    top: 40%;
+    left: -20%;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 120%;
+    margin-bottom: 5%;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.organizeContentButton {
+    float: left;
+    background-color: teal;
+    border-radius: 10px;
+}
+
+.sectionSpacing {
+    padding-top: 8vh;
+    padding-bottom: 8vh;
+}
+
+.organizeSection {
+    background-color: thistle;
+}
+
+.groupSection {
+    background-color: wheat;
+    height: 550px;
+}
+
+.addTaskContent {
+    position: relative;
+    top: 40%;
+    left: 15%;
+    max-width: 80%;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 120%;
+    margin-bottom: 5%;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.addTaskContentImage {
+    height: 480px;
+}
+
+.groupTaskContentImage {
+    width: 100%;
+}
+
+.img1 {
+    position: relative;
+    top: 40%;
+}
+.groupTaskContent {
+    position: relative;
+    top: 40%;
+    width: 70%;
+    left: 15%;
+    text-align: left;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 120%;
+}
+
+.footer {
+    background-color: teal;
+    height: 100px;
+    text-align: left;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+}
+
+.mailMe:link {
+    color: rgb(216, 81, 114) !important;
+    font-weight: 600;
+}
+
+@media only screen and (max-device-width: 480px) {
+    .headerBarButton {
+        margin-top: 3%;
+        padding: 1%;
+        width: 75px;
+        height: 45px;
+        font-weight: bold;
+        font-size: small;
+    }
+
+    .logo {
+        margin: 2% 2%;
+        height: 55px !important;
+        width: 55px !important;
+    }
+
+    .landingTitle {
+        font-family: 'Montserrat', sans-serif;;
+        font-size: 200%;
+        font-weight: bold;
+    }
+    .headerButtonLink {
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+
+    .organizeContent {
+        text-align: center;
+        left: 0%;
+    }
+    .organizeContentButton {
+        float: none;
+    }
+    .organizeContentImage {
+        margin-top: 5%;
+        margin-bottom: 5%;
+        max-width: 100% !important;
+        max-height: 300px;
+    }
+    .organizeSection {
+        padding-bottom: 13vh;
+    }
+
+    .addTaskContent {
+        text-align: center;
+        top: 20%;
+    }
+
+    .addTaskContentImage {
+        margin-top: 15%;
+        max-width: 100% !important;
+        max-height: 300px;
+    }
+
+    .img1 {
+        position: relative;
+        top: 75%;
+    }
+
+    .groupTaskContent {
+        position: relative;
+        top: -150%
+    }
+
+    .groupSection {
+        height: auto;
+    }
+}
