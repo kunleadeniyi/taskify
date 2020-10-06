@@ -13,6 +13,8 @@ import { Paper, Divider } from '@material-ui/core';
 
 const axios = require('axios')
 
+const googleId = process.env.REACT_APP_GOOGLE_CLIENT_ID;
+
 function Login() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -78,7 +80,7 @@ function Login() {
                     <Paper elevation={4} style={{padding: '5% 5%'}}>
                     <h2 className='formLabel'>Log in</h2>
                     <GoogleLogin 
-                    clientId={process.env.REACT_APP_GOOGLE_CLIENT_ID} // move variable to .env
+                    clientId={googleId} // move variable to .env
                     buttonText="Continue with Google"
                     scope="profile"
                     onSuccess={responseGoogle}
