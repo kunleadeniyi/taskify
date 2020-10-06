@@ -115,7 +115,7 @@ function Signup() {
 
                         <Form.Group controlId="formBasicPassword" className='formItem'>
                             <Form.Label className='formLabel'>Password</Form.Label>
-                            <Form.Control type="password" placeholder="Password" value={password} onChange={(e)=>setPassword(e.target.value)}/>
+                            <Form.Control type="password" placeholder="Password" value={password} autoComplete="on" onChange={(e)=>setPassword(e.target.value)}/>
                         </Form.Group>
                         
                         <Button variant="primary" type="submit" className="googleButton">
