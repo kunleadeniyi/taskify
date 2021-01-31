@@ -1,14 +1,21 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 
 import { Button, Col, Container, Image, Row } from 'react-bootstrap';
 
 import './Landing.css';
 import { Avatar } from '@material-ui/core';
 
+import Auth from '../../config/authenticate';
+
 function Landing() {
     return (
         <div>
+
+            {
+            Auth.getAuth() ? <Redirect to="/home" /> 
+            :
+            <div>
             <Container fluid>
                 <Row>
                     <Col md={8} xs={6} style={{display:'inline-flex'}}>
@@ -88,6 +95,8 @@ function Landing() {
                 <p>For any suggestion on improving this site,
                 <a href="mailto:adeniyikunle22@gmail.com" className='mailMe'> mail me</a></p>
             </footer>
+        </div>                        
+        }
         </div>
     )
 }
