@@ -229,6 +229,7 @@ function Home(props) {
         .then(function () {
           Auth.signout()
           localStorage.removeItem("token");
+          localStorage.removeItem("authenticated");
           history.push('/login')
         })
         .catch(function (error) {

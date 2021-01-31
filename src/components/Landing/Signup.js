@@ -97,7 +97,6 @@ function Signup() {
                     onSuccess={responseGoogle}
                     onFailure={responseGoogle}
                     className='googleButton'
-                    disabled={buttonDisabled}
                     />
                     <Divider style={{margin: '35px 10px 15px 10px'}}/>
                     <Form onSubmit={signup}>
