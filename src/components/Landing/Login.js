@@ -18,9 +18,13 @@ const googleId = process.env.REACT_APP_GOOGLE_CLIENT_ID;
 function Login() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+
+    const [buttonDisabled, setButtonDisabled] = useState(false);
+
     let history = useHistory();
 
     const login = (e) => {
+        setButtonDisabled(true)
         e.preventDefault()
         if (!email) {
             return toast.error("Please fill all details")
@@ -102,7 +106,7 @@ function Login() {
                             <Form.Control type="password" placeholder="Password" value={password} autoComplete="on" onChange={(e)=>setPassword(e.target.value)}/>
                         </Form.Group>
                         
-                        <Button variant="primary" type="submit" className="googleButton">
+                        <Button variant="primary" type="submit" className="googleButton" disabled={buttonDisabled}>
                             Log in
                         </Button>
                     </Form>

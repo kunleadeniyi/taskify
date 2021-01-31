@@ -22,10 +22,14 @@ function Signup() {
     const [lastName, setLastName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+
+    const [buttonDisabled, setButtonDisabled] = useState(false);
+
     let history = useHistory();
 
       // Login form sumbit handler
       const signup = (e) => {
+        setButtonDisabled(true)
         e.preventDefault()
         if (!email || !password || !firstName || !lastName) {
             return toast.error("Please fill all details")
@@ -93,6 +97,7 @@ function Signup() {
                     onSuccess={responseGoogle}
                     onFailure={responseGoogle}
                     className='googleButton'
+                    disabled={buttonDisabled}
                     />
                     <Divider style={{margin: '35px 10px 15px 10px'}}/>
                     <Form onSubmit={signup}>
@@ -118,7 +123,7 @@ function Signup() {
                             <Form.Control type="password" placeholder="Password" value={password} autoComplete="on" onChange={(e)=>setPassword(e.target.value)}/>
                         </Form.Group>
                         
-                        <Button variant="primary" type="submit" className="googleButton">
+                        <Button variant="primary" type="submit" className="googleButton" disabled={buttonDisabled}>
                             Sign up
                         </Button>
                     </Form>
