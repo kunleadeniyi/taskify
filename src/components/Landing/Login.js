@@ -26,12 +26,11 @@ function Login() {
     const login = (e) => {
         setButtonDisabled(true)
         e.preventDefault()
-        if (!email) {
+        if (!email || !password) {
+            setButtonDisabled(false)
             return toast.error("Please fill all details")
         }
-        if (!password) {
-            return toast.error("Please fill all details")
-        }
+        
         const request = {
             email: email,
             password: password
@@ -44,7 +43,8 @@ function Login() {
           history.push('/home')
         })
         .catch(function (error) {
-          console.log(error);
+          // console.log(error);
+          setButtonDisabled(false)
           return toast.error("email or password incorrect")
         });
       }

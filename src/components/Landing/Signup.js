@@ -27,11 +27,12 @@ function Signup() {
 
     let history = useHistory();
 
-      // Login form sumbit handler
+      // Signup form sumbit handler
       const signup = (e) => {
         setButtonDisabled(true)
         e.preventDefault()
         if (!email || !password || !firstName || !lastName) {
+            setButtonDisabled(false)
             return toast.error("Please fill all details")
         }
         const request = {
@@ -52,6 +53,7 @@ function Signup() {
             history.push('/login')
         })
         .catch(function (error) {
+            setButtonDisabled(false)
             toast.error(error.message)
         });
       }
@@ -78,7 +80,7 @@ function Signup() {
             history.push('/home')
         })
         .catch(function (error) {
-            console.log(error);
+            // console.log(error);
             return toast.error("email or password incorrect")
         });
     }
