@@ -92,7 +92,7 @@ function Landing() {
                 </Container>
             </section>
             <footer className="footer">
-                <p>For any suggestion on improving this site,
+                <p>For any suggestions on improving this site,
                 <a href="mailto:devayokunle@gmail.com" className='mailMe'> mail me</a></p>
             </footer>
         </div>                        
